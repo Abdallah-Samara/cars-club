@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+
+    body{
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+        position: relative;
+        background: url('./about.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    *:not(.overlay){
+        position: relative;
+        z-index: 10;
+    }
+
+
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    h1{
+        color: #FFF;
+        margin: auto;
+        width: fit-content;
+        font-size: 100px;
+    }
+
+    .text{
+        font-size: 1.5rem;
+        color: #FFF;
+        background: #000000ba;
+        border-radius: 10px;
+        padding: 50px;
+        line-height: 1.7;
+    }
+
+    .car-link{
+        background-color: yellow;
+        color: #000;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .rate{
+        background-color: #FFF;
+        padding: 10px;
+        border-radius: 10px;
+        width: 400px;
+        margin: auto;
+    }
+
+        .logo{
+        width: 150px;
+        font-size: 2rem;
+        color: yellow;
+        cursor: pointer;
+        text-decoration: none;
+        top: 30px;
+        left: 20px;
+        font-weight: bold;
+        position: absolute;
+    }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <a href="./index.html" class="logo">Cars Club</a>
+
+    <h1>ABOUT US</h1>
+
+    <div class="text">
+        Welcome to Cars Club, where our passion for automobiles drives us to provide you with an unparalleled automotive experience. As avid car enthusiasts ourselves, we understand the thrill of the open road, the allure of cutting-edge technology, and the timeless elegance of classic design.
+
+        At Cars Club, we aim to be more than just a destination for information; we strive to be your trusted companion on your automotive journey. Whether you're a seasoned gearhead or a first-time car buyer, our platform is designed to cater to your needs, offering a wealth of resources and insights to guide you through every step of your automotive endeavors.
+
+        What sets us apart is our commitment to delivering accurate, up-to-date, and unbiased information. Our team of automotive experts and enthusiasts work tirelessly to bring you comprehensive reviews, insightful guides, and the latest industry news. From the sleekest sports cars to the most reliable family SUVs, we cover a wide spectrum of vehicles, ensuring that there's something for everyone in our diverse community.
+
+        At the heart of our mission is a dedication to empowering our audience with the knowledge they need to make informed decisions. Whether you're researching the latest models, seeking maintenance tips, or exploring the future of automotive technology, Cars Club is your go-to resource.
+
+        We understand that the automotive landscape is ever-evolving, and so are we. As we continue to grow and evolve, we invite you to join us on this exciting journey. Explore our virtual showroom, engage with our community, and immerse yourself in the world of cars through Cars Club.
+
+        Thank you for choosing Cars Club as your automotive companion. Fasten your seatbelt, and let's embark on this exhilarating ride together!
+    </div>
+
+    <div style="display: flex;align-items: center;justify-content: center;gap: 0.5rem;margin-bottom: 2rem;">
+        <a class="car-link" href="./bmw.html">BMW</a>
+        <a class="car-link" href="./mercedes.html">Mercedes</a>
+        <a class="car-link" href="./audi.html">Audi</a>
+        <a class="car-link" href="./porsche.html">Porsche</a>
+    </div>
+
+    <div style="display: flex;align-items: center;justify-content: center;">
+        <input type="text" class="rate" placeholder="Write here ..">
+    </div>
+
+</body>
+</html>

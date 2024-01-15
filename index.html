@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car website</title>
+    <link rel="stylesheet"href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+ <div class=""main>
+    <nav>
+
+        <div class="logo">
+            <h3>Cars Club</h3>
+        </div>
+        <div class="nav-links">
+         
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle-btn"> Explore cars </a> 
+            <div class="dropdown-content">
+              <a href="./bmw.html">BMW</a>
+              <a href="./mercedes.html">Mercedes</a>
+              <a href="./audi.html">Audi</a>
+              <a href="./porsche.html">Porsche</a>
+            </div>
+          </div>
+
+          <a href="./site-map.html">Site Map</a>
+        <a href="./contact-us.html">Contact Us</a>
+        <a href="#"> Our Services</a>
+        <a  href="./about.html" class="btn">About</a>
+        
+    </div>
+    
+        </div>
+    </div>
+
+    </nav>
+    <div class="content">
+      <h1>Buy the best<br>Quality cars</h1>  
+      <div class="search">
+        <input type="text" placeholder="Search Car">
+      </div>
+<button type="submit">Search</button>
+    </div>
+
+ </div>  
+ <!-- <div class="form">
+    <div class="box">
+      <input type="email" name="email" placeholder="Enter Your Email">
+      <input type="Password" name="Password" placeholder="Password">
+    </div>  
+    <div class="link">
+      <a href="#">log in</a>
+    </div>
+    <div class="link1">
+      <a href="#">Forgetten Password</a>
+    </div>
+  </div>
+ </div> -->
+
+    <form class="form bg-white p-3 rounded" style="height: auto !important;">
+
+        
+      <h1>REGISTER</h1>
+
+      <div class="text-danger" id="validation_messages">
+
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password">
+      </div>
+
+
+      <div class="mb-3">
+        <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm_password">
+      </div>
+
+      <div class="mb-3">
+        <input type="datetime-local" id="date" class="form-control" name="date">
+      </div>
+
+      <div>
+        <h4 class="mb-2">Chose your gender  : </h4>
+
+        <div class="d-flex align-items-center gap-5 mb-3">
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                MALE
+              </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                FEMALE
+              </label>
+          </div>
+        </div>
+      </div>
+      
+
+
+      <div >
+        <h4 class="mb-2">Chose your car  : </h4>
+
+          <div class="d-flex align-items-center gap-2 mb-3">
+          <div class="form-check">
+              <input class="form-check-inpu car_input" type="checkbox" name="car" value="audio">
+              <label class="form-check-label" for="flexRadioDefault1">
+                audio
+              </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input car_input" type="checkbox" name="car"   value="bmw">
+              <label class="form-check-label" for="flexRadioDefault2">
+                bmw
+              </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input car_input" type="checkbox" name="car"  value="mercedes">
+              <label class="form-check-label" for="flexRadioDefault2">
+                mercedes
+              </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input car_input" type="checkbox" name="car" value="porsche">
+              <label class="form-check-label" for="flexRadioDefault2">
+                porsche
+              </label>
+          </div>
+        </div>
+      </div>
+
+
+      <button type="submit"  class="btn btn-primary" id="submit">Register</button>
+    </form>
+
+
+
+    <script>
+      let password_message = '';
+      let confirm_password_message = '';
+      let password_empty_message = '';
+      let email_message = '';
+      let car_input_message = '';
+
+      document.querySelector('#submit').addEventListener('click' , (e) => {
+        e.preventDefault();
+
+        let password_input = document.querySelector('#password');
+        let password_confirmation_input = document.querySelector('#confirm_password');
+        let email_input = document.querySelector('#email');
+        let car_input = document.querySelector('#car');
+        
+
+        if(email_input.value.includes('@'))
+        {
+             email_message = '';
+        }
+        else{
+             email_message = 'email not valid';
+        }
+
+
+
+
+        if(password_input.value == password_confirmation_input.value)
+        {
+             confirm_password_message = '';
+        }
+        else{
+             confirm_password_message = 'password not matching .. please try again';
+        }
+
+        if(document.querySelector('.car_input:checked'))
+        {
+            car_input_message = '';
+        }
+        else{
+          car_input_message = 'car input is required';
+        }
+
+
+        if(password_input.value.length > 0 && password_confirmation_input.value.length > 0 )
+        {
+           password_confirmation_input = '';
+        }
+        else
+        {
+            password_confirmation_input  = 'password or  password confirmation is required';
+        }
+
+        document.querySelector('#validation_messages').innerHTML = `         
+        <span class='d-block mb-2 fw-bold'>${password_message}</span>
+         <span class='d-block mb-2 fw-bold'>${confirm_password_message}</span>
+         <span class='d-block mb-2 fw-bold'>${email_message}</span>
+         <span class='d-block mb-2 fw-bold'>${car_input_message}</span>
+         <span class='d-block mb-2 fw-bold'>${password_confirmation_input}</span>
+         `;
+        
+
+         if(!password_message && !confirm_password_message && !password_empty_message && !email_message && !car_input_message)
+         {
+            document.querySelector('#validation_messages').innerHTML = `         
+                <span class='d-block mb-2 fw-bold text-success'>The registration process was completed successfully</span>
+          `;
+         }
+      });
+
+
+
+
+   
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
+
+  
